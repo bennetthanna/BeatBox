@@ -17,8 +17,16 @@ import com.hannabennett.beatbox.databinding.ListItemSoundBinding;
  */
 
 public class BeatBoxFragment extends Fragment {
+    private BeatBox mBeatBox;
+
     public static BeatBoxFragment newInstance() {
         return new BeatBoxFragment();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBeatBox = new BeatBox(getActivity());
     }
 
     @Override
